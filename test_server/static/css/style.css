@@ -1,0 +1,47 @@
+body {
+    background: black;
+    color: white;
+    margin: 0; /* Убираем внешние отступы */
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.cards-container {
+    display: flex; /* Располагаем карточки в строку */
+    gap: 20px; /* Отступы между карточками */
+    flex-wrap: wrap; /* Чтобы переносились при нехватке места */
+    justify-content: center; /* Выравниваем карточки по центру */
+    padding: 20px; /* Отступ вокруг контейнера */
+}
+
+.card {
+    border: 1px solid yellow;
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    vertical-align: top;
+    display: inline-block;
+    background: black; /* Если нужен фон у карточки */
+}
+
+.card-photo {
+    width: 300px;
+    border-radius: 20px;
+    display: block; /* Убираем лишний отступ снизу */
+}
+
+.card-text {
+    margin: 10px 0;
+    text-align: left; /* Выравниваем текст по левому краю */
+}
+
+.card-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 20px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer; /* Добавляем курсор при наведении */
+    display: inline-block; /* Делаем кнопку не на всю ширину */
+    text-align: left; /* Выравниваем текст внутри кнопки */
+}

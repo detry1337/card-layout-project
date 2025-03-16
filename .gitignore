@@ -1,0 +1,13 @@
+# Игнорируем папки зависимостей
+node_modules/
+venv/
+__pycache__/
+
+# Файлы редактора
+.vscode/
+.idea/
+*.log
+
+# Файлы системы
+.DS_Store
+Thumbs.db

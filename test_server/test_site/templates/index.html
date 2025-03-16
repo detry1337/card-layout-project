@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список тренеров</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1 style="text-align: center;">Список тренеров</h1>
+    <div class="cards-container">
+        {% for good in goods %}
+            <div class="card">
+                <img class="card-photo" src="{{ good.img }}" alt="{{ good.label }}">
+                <p class="card-text">{{ good.label }}</p>
+                <button class="card-button">Выбрать</button>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
