@@ -1,16 +1,16 @@
 body {
     background: black;
     color: white;
-    margin: 0; /* Убираем внешние отступы */
+    margin: 0;
     font-family: Helvetica, Arial, sans-serif;
 }
 
 .cards-container {
-    display: flex; /* Располагаем карточки в строку */
-    gap: 20px; /* Отступы между карточками */
-    flex-wrap: wrap; /* Чтобы переносились при нехватке места */
-    justify-content: center; /* Выравниваем карточки по центру */
-    padding: 20px; /* Отступ вокруг контейнера */
+    display: flex;
+    gap: 20px; /* Добавляем отступы между карточками */
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
 }
 
 .card {
@@ -20,18 +20,26 @@ body {
     width: 300px;
     vertical-align: top;
     display: inline-block;
-    background: black; /* Если нужен фон у карточки */
+    background: black;
+    min-height: 400px; /* Устанавливаем минимальную высоту карточек */
+    position: relative; /* Для абсолютного позиционирования элементов внутри */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавное изменение масштаба и тени */
+}
+
+.card:hover {
+    transform: scale(1.05); /* Масштабируем карточку при наведении */
+    box-shadow: 0 4px 8px rgba(255, 88, 88, 0.5); /* Добавляем тень при наведении */
 }
 
 .card-photo {
     width: 300px;
     border-radius: 20px;
-    display: block; /* Убираем лишний отступ снизу */
+    display: block;
 }
 
 .card-text {
     margin: 10px 0;
-    text-align: left; /* Выравниваем текст по левому краю */
+    text-align: left;
 }
 
 .card-button {
@@ -41,7 +49,23 @@ body {
     background: red;
     color: white;
     border: none;
-    cursor: pointer; /* Добавляем курсор при наведении */
-    display: inline-block; /* Делаем кнопку не на всю ширину */
-    text-align: left; /* Выравниваем текст внутри кнопки */
+    cursor: pointer;
+    display: inline-block;
+    text-align: left;
+    position: absolute; /* Абсолютное позиционирование кнопки */
+    bottom: 20px;
+    right: 20px;
+    transition: background-color 0.3s, color 0.3s; /* Плавное изменение фона и цвета текста */
 }
+
+.card-button:hover {
+    background-color: #fd7c7c;
+    color: black;
+}
+
+.card .sale-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+

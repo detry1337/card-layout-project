@@ -11,6 +11,10 @@
     <div class="cards-container">
         {% for good in goods %}
             <div class="card">
+                {% if forloop.first %}
+                    <!-- Иконка sale в первую карточку -->
+                    <img class="sale-icon" src="{{sale_img}}">
+                {% endif %}
                 <img class="card-photo" src="{{ good.img }}" alt="{{ good.label }}">
                 <p class="card-text">{{ good.label }}</p>
                 <button class="card-button">Выбрать</button>
